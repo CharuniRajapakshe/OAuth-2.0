@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Git Login App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="upload.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="upload.js"></script>
+    <style>
+        #home{
+            text-align: center;
+            margin: 50px;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+ .btn-4 {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+  }
+  .btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+         .btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+p{
+            text-align: center;
+
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+        <header><h1>GDrive Manager</h1></header>
+        <p>You are logged in with Google OAuth</p>
+   <div id="home">
+       <div>
+        <div class="upload-btn-wrapper">
+                <button class="btn btn-4">Select File</button>
+                <input id="files" type="file" name="myfile" name="files[]"/>
+        </div>
+        <button  class="btn btn-2" id="upload">Upload</button>                                
+        
+        </div>
+        <div id="progress-wrp">
+        <div class="progress-bar"></div>
+        <div class="status">0%</div>
+    </div>
+   </div> 
+   <div id="result">
+   </div>
+</body>
+</html>
