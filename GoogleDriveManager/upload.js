@@ -2,11 +2,11 @@ $(document).ready(function(){
 
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
-    const redirect_uri = "http://localhost/googledrivemanager/upload.html" // replace with your redirect_uri;
-    const client_secret = "nDyMBbuoYqx-20V9U2qzI6O5"; // replace with your client secret
+    const redirect_uri = "http://localhost/googledrivemanager/upload.html" 
+    const client_secret = ""; 
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
-    var client_id = "391270972135-1g3pp103jo02fu7vkokhq6ci007kcbor.apps.googleusercontent.com"// replace it with your client id;
+    var client_id = ""
     
     $.ajax({
         type: 'POST',
